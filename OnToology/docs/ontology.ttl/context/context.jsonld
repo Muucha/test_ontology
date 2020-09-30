@@ -1,0 +1,101 @@
+{
+  "@context" : {
+    "PepperTopping" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#PepperTopping"
+    },
+    "DeepPanBase" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#DeepPanBase"
+    },
+    "hasTopping" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#hasTopping",
+      "@type" : "@id"
+    },
+    "isToppingOf" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#isToppingOf",
+      "@type" : "@id"
+    },
+    "MozzarellaTopping" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#MozzarellaTopping"
+    },
+    "MargharitaPizza" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#MargharitaPizza"
+    },
+    "MeatTopping" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#MeatTopping"
+    },
+    "HighCaloriePizza" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#HighCaloriePizza"
+    },
+    "TomatoTopping" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#TomatoTopping"
+    },
+    "isBaseOf" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#isBaseOf",
+      "@type" : "@id"
+    },
+    "ThinAndCrispyBase" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#ThinAndCrispyBase"
+    },
+    "Pizza" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#Pizza"
+    },
+    "PizzaTopping" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#PizzaTopping"
+    },
+    "VegetarianPizza" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#VegetarianPizza"
+    },
+    "RedPepperTopping" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#RedPepperTopping"
+    },
+    "GreenPepperTopping" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#GreenPepperTopping"
+    },
+    "VegetableTopping" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#VegetableTopping"
+    },
+    "MushroomTopping" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#MushroomTopping"
+    },
+    "PepperoniTopping" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#PepperoniTopping"
+    },
+    "CheeseTopping" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#CheeseTopping"
+    },
+    "PizzaBase" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#PizzaBase"
+    },
+    "AmericanPizza" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#AmericanPizza"
+    },
+    "HamTopping" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#HamTopping"
+    },
+    "hasBase" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#hasBase",
+      "@type" : "@id"
+    },
+    "ParmezanTopping" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#ParmezanTopping"
+    },
+    "CheeseyPizza" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#CheeseyPizza"
+    },
+    "hasCalorificValue" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#hasCalorificValue"
+    },
+    "NonVegetarianPizza" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#NonVegetarianPizza"
+    },
+    "MyPizza" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#MyPizza"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "NamedPizza" : {
+      "@id" : "http://lumii.lv/ontologies/pizza.owl#NamedPizza"
+    }
+  }
+}

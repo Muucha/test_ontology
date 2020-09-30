@@ -1,0 +1,28 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:PizzaBase" "base:PepperTopping" "base:HighCaloriePizza" "base:TomatoTopping" "base:VegetableTopping" "base:GreenPepperTopping" "base:CheeseyPizza" "base:MozzarellaTopping" "base:PepperoniTopping" "base:VegetarianPizza" "base:RedPepperTopping" "base:PizzaTopping" "base:MargharitaPizza" "base:MyPizza" "base:NonVegetarianPizza" "base:ParmezanTopping" "base:AmericanPizza" "base:CheeseTopping" "base:DeepPanBase" "base:Pizza" "base:HamTopping" "base:MeatTopping" "base:MushroomTopping" "base:ThinAndCrispyBase" "base:NamedPizza" ; /*classes style*/
+	"base:ThinAndCrispyBase" -> "base:PizzaBase" [ label = "rdfs:subClassOf" ];
+	"base:GreenPepperTopping" -> "base:PepperTopping" [ label = "rdfs:subClassOf" ];
+	"base:TomatoTopping" -> "base:VegetableTopping" [ label = "rdfs:subClassOf" ];
+	"base:AmericanPizza" -> "base:NamedPizza" [ label = "rdfs:subClassOf" ];
+	"base:MargharitaPizza" -> "base:NamedPizza" [ label = "rdfs:subClassOf" ];
+	"base:MyPizza" -> "base:NamedPizza" [ label = "rdfs:subClassOf" ];
+	"base:VegetarianPizza" -> "base:Pizza" [ label = "rdfs:subClassOf" ];
+	"base:CheeseyPizza" -> "base:Pizza" [ label = "rdfs:subClassOf" ];
+	"base:CheeseTopping" -> "base:PizzaTopping" [ label = "rdfs:subClassOf" ];
+	"base:RedPepperTopping" -> "base:PepperTopping" [ label = "rdfs:subClassOf" ];
+	"base:DeepPanBase" -> "base:PizzaBase" [ label = "rdfs:subClassOf" ];
+	"base:PepperoniTopping" -> "base:MeatTopping" [ label = "rdfs:subClassOf" ];
+	"base:HamTopping" -> "base:MeatTopping" [ label = "rdfs:subClassOf" ];
+	"base:HighCaloriePizza" -> "base:Pizza" [ label = "rdfs:subClassOf" ];
+	"base:NamedPizza" -> "base:Pizza" [ label = "rdfs:subClassOf" ];
+	"base:ParmezanTopping" -> "base:CheeseTopping" [ label = "rdfs:subClassOf" ];
+	"base:MozzarellaTopping" -> "base:CheeseTopping" [ label = "rdfs:subClassOf" ];
+	"base:MushroomTopping" -> "base:VegetableTopping" [ label = "rdfs:subClassOf" ];
+	"base:MeatTopping" -> "base:PizzaTopping" [ label = "rdfs:subClassOf" ];
+	"base:VegetableTopping" -> "base:PizzaTopping" [ label = "rdfs:subClassOf" ];
+	"base:PepperTopping" -> "base:VegetableTopping" [ label = "rdfs:subClassOf" ];
+	"base:NonVegetarianPizza" -> "base:Pizza" [ label = "rdfs:subClassOf" ];
+
+}
