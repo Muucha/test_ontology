@@ -1,0 +1,339 @@
+<http://lumii.lv/ontologies/pizza.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2000/01/rdf-schema#comment
+<http://www.w3.org/2000/01/rdf-schema#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://lumii.lv/ontologies/pizza.owl#hasBase
+<http://lumii.lv/ontologies/pizza.owl#hasBase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lumii.lv/ontologies/pizza.owl#hasBase> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+<http://lumii.lv/ontologies/pizza.owl#hasBase> <http://www.w3.org/2000/01/rdf-schema#range> <http://lumii.lv/ontologies/pizza.owl#PizzaBase> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#hasTopping
+<http://lumii.lv/ontologies/pizza.owl#hasTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lumii.lv/ontologies/pizza.owl#hasTopping> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+<http://lumii.lv/ontologies/pizza.owl#hasTopping> <http://www.w3.org/2000/01/rdf-schema#range> <http://lumii.lv/ontologies/pizza.owl#PizzaTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#isBaseOf
+<http://lumii.lv/ontologies/pizza.owl#isBaseOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lumii.lv/ontologies/pizza.owl#isBaseOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://lumii.lv/ontologies/pizza.owl#hasBase> .
+<http://lumii.lv/ontologies/pizza.owl#isBaseOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lumii.lv/ontologies/pizza.owl#PizzaBase> .
+<http://lumii.lv/ontologies/pizza.owl#isBaseOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#isToppingOf
+<http://lumii.lv/ontologies/pizza.owl#isToppingOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lumii.lv/ontologies/pizza.owl#isToppingOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://lumii.lv/ontologies/pizza.owl#hasTopping> .
+<http://lumii.lv/ontologies/pizza.owl#isToppingOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lumii.lv/ontologies/pizza.owl#PizzaTopping> .
+<http://lumii.lv/ontologies/pizza.owl#isToppingOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://lumii.lv/ontologies/pizza.owl#hasCalorificValue
+<http://lumii.lv/ontologies/pizza.owl#hasCalorificValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://lumii.lv/ontologies/pizza.owl#AmericanPizza
+<http://lumii.lv/ontologies/pizza.owl#AmericanPizza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#AmericanPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#NamedPizza> .
+<http://lumii.lv/ontologies/pizza.owl#AmericanPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://lumii.lv/ontologies/pizza.owl#hasTopping> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://lumii.lv/ontologies/pizza.owl#MozzarellaTopping> .
+<http://lumii.lv/ontologies/pizza.owl#AmericanPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://lumii.lv/ontologies/pizza.owl#hasTopping> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://lumii.lv/ontologies/pizza.owl#PepperoniTopping> .
+<http://lumii.lv/ontologies/pizza.owl#AmericanPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://lumii.lv/ontologies/pizza.owl#hasTopping> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://lumii.lv/ontologies/pizza.owl#TomatoTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#CheeseTopping
+<http://lumii.lv/ontologies/pizza.owl#CheeseTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#CheeseTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#PizzaTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#CheeseyPizza
+<http://lumii.lv/ontologies/pizza.owl#CheeseyPizza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#CheeseyPizza> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://lumii.lv/ontologies/pizza.owl#hasTopping> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://lumii.lv/ontologies/pizza.owl#CheeseTopping> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#CheeseyPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#DeepPanBase
+<http://lumii.lv/ontologies/pizza.owl#DeepPanBase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#DeepPanBase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#PizzaBase> .
+<http://lumii.lv/ontologies/pizza.owl#DeepPanBase> <http://www.w3.org/2002/07/owl#disjointWith> <http://lumii.lv/ontologies/pizza.owl#ThinAndCrispyBase> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#GreenPepperTopping
+<http://lumii.lv/ontologies/pizza.owl#GreenPepperTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#GreenPepperTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#PepperTopping> .
+<http://lumii.lv/ontologies/pizza.owl#GreenPepperTopping> <http://www.w3.org/2002/07/owl#disjointWith> <http://lumii.lv/ontologies/pizza.owl#RedPepperTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#HamTopping
+<http://lumii.lv/ontologies/pizza.owl#HamTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#HamTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#MeatTopping> .
+<http://lumii.lv/ontologies/pizza.owl#HamTopping> <http://www.w3.org/2002/07/owl#disjointWith> <http://lumii.lv/ontologies/pizza.owl#PepperoniTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#HighCaloriePizza
+<http://lumii.lv/ontologies/pizza.owl#HighCaloriePizza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#HighCaloriePizza> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://lumii.lv/ontologies/pizza.owl#hasCalorificValue> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid11 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid11 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
+_:genid13 <http://www.w3.org/2001/XMLSchema#minInclusive> "400"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#HighCaloriePizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#MargharitaPizza
+<http://lumii.lv/ontologies/pizza.owl#MargharitaPizza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#MargharitaPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#NamedPizza> .
+<http://lumii.lv/ontologies/pizza.owl#MargharitaPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://lumii.lv/ontologies/pizza.owl#hasTopping> .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://lumii.lv/ontologies/pizza.owl#MozzarellaTopping> .
+<http://lumii.lv/ontologies/pizza.owl#MargharitaPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://lumii.lv/ontologies/pizza.owl#hasTopping> .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://lumii.lv/ontologies/pizza.owl#TomatoTopping> .
+<http://lumii.lv/ontologies/pizza.owl#MargharitaPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://lumii.lv/ontologies/pizza.owl#hasTopping> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid18 <http://www.w3.org/2002/07/owl#unionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#MozzarellaTopping> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#TomatoTopping> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://lumii.lv/ontologies/pizza.owl#MargharitaPizza> <http://www.w3.org/2000/01/rdf-schema#comment> "A pizza that only has Mozzarella and Tomato toppings" .
+# 
+# http://lumii.lv/ontologies/pizza.owl#MeatTopping
+<http://lumii.lv/ontologies/pizza.owl#MeatTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#MeatTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#PizzaTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#MozzarellaTopping
+<http://lumii.lv/ontologies/pizza.owl#MozzarellaTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#MozzarellaTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#CheeseTopping> .
+<http://lumii.lv/ontologies/pizza.owl#MozzarellaTopping> <http://www.w3.org/2002/07/owl#disjointWith> <http://lumii.lv/ontologies/pizza.owl#ParmezanTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#MushroomTopping
+<http://lumii.lv/ontologies/pizza.owl#MushroomTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#MushroomTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#VegetableTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#MyPizza
+<http://lumii.lv/ontologies/pizza.owl#MyPizza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#MyPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#NamedPizza> .
+<http://lumii.lv/ontologies/pizza.owl#MyPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://lumii.lv/ontologies/pizza.owl#hasTopping> .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://lumii.lv/ontologies/pizza.owl#CheeseTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#NamedPizza
+<http://lumii.lv/ontologies/pizza.owl#NamedPizza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#NamedPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#NonVegetarianPizza
+<http://lumii.lv/ontologies/pizza.owl#NonVegetarianPizza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#NonVegetarianPizza> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid24 <http://www.w3.org/2002/07/owl#complementOf> <http://lumii.lv/ontologies/pizza.owl#VegetarianPizza> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#NonVegetarianPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#ParmezanTopping
+<http://lumii.lv/ontologies/pizza.owl#ParmezanTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#ParmezanTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#CheeseTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#PepperTopping
+<http://lumii.lv/ontologies/pizza.owl#PepperTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#PepperTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#VegetableTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#PepperoniTopping
+<http://lumii.lv/ontologies/pizza.owl#PepperoniTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#PepperoniTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#MeatTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#Pizza
+<http://lumii.lv/ontologies/pizza.owl#Pizza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#Pizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://lumii.lv/ontologies/pizza.owl#hasBase> .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://lumii.lv/ontologies/pizza.owl#PizzaBase> .
+<http://lumii.lv/ontologies/pizza.owl#Pizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://lumii.lv/ontologies/pizza.owl#hasCalorificValue> .
+_:genid27 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid27 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#PizzaBase
+<http://lumii.lv/ontologies/pizza.owl#PizzaBase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#PizzaTopping
+<http://lumii.lv/ontologies/pizza.owl#PizzaTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#RedPepperTopping
+<http://lumii.lv/ontologies/pizza.owl#RedPepperTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#RedPepperTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#PepperTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#ThinAndCrispyBase
+<http://lumii.lv/ontologies/pizza.owl#ThinAndCrispyBase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#ThinAndCrispyBase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#PizzaBase> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#TomatoTopping
+<http://lumii.lv/ontologies/pizza.owl#TomatoTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#TomatoTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#VegetableTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#VegetableTopping
+<http://lumii.lv/ontologies/pizza.owl#VegetableTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#VegetableTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#PizzaTopping> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#VegetarianPizza
+<http://lumii.lv/ontologies/pizza.owl#VegetarianPizza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#VegetarianPizza> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://lumii.lv/ontologies/pizza.owl#hasTopping> .
+_:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid31 <http://www.w3.org/2002/07/owl#unionOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#CheeseTopping> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#VegetableTopping> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lumii.lv/ontologies/pizza.owl#VegetarianPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://lumii.lv/ontologies/pizza.owl#TestPizza2
+<http://lumii.lv/ontologies/pizza.owl#TestPizza2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lumii.lv/ontologies/pizza.owl#TestPizza2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+<http://lumii.lv/ontologies/pizza.owl#TestPizza2> <http://lumii.lv/ontologies/pizza.owl#hasCalorificValue> "250"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://lumii.lv/ontologies/pizza.owl#TetsPizza1
+<http://lumii.lv/ontologies/pizza.owl#TetsPizza1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lumii.lv/ontologies/pizza.owl#TetsPizza1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+<http://lumii.lv/ontologies/pizza.owl#TetsPizza1> <http://lumii.lv/ontologies/pizza.owl#hasCalorificValue> "500"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid35 <http://www.w3.org/2002/07/owl#members> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#CheeseTopping> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#MeatTopping> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#VegetableTopping> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid39 <http://www.w3.org/2002/07/owl#members> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#MushroomTopping> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#PepperTopping> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#TomatoTopping> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid43 <http://www.w3.org/2002/07/owl#members> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#Pizza> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#PizzaBase> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lumii.lv/ontologies/pizza.owl#PizzaTopping> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
