@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "pizza:PizzaBase" "pizza:PepperTopping" "pizza:HighCaloriePizza" "pizza:TomatoTopping" "pizza:VegetableTopping" "pizza:GreenPepperTopping" "pizza:PepperoniTopping" "pizza:CheeseyPizza" "pizza:MozzarellaTopping" "pizza:VegetarianPizza" "pizza:RedPepperTopping" "pizza:PizzaTopping" "pizza:MyPizza" "pizza:MargharitaPizza" "pizza:NonVegetarianPizza" "pizza:ParmezanTopping" "pizza:AmericanPizza" "pizza:CheeseTopping" "pizza:DeepPanBase" "pizza:Pizza" "pizza:HamTopping" "pizza:MeatTopping" "pizza:MushroomTopping" "pizza:ThinAndCrispyBase" "pizza:NamedPizza" ; /*classes style*/
+node [shape = rectangle, color="black"]; "pizza:PizzaBase" "pizza:PepperTopping" "pizza:HighCaloriePizza" "pizza:TomatoTopping" "pizza:VegetableTopping" "pizza:GreenPepperTopping" "pizza:CheeseyPizza" "pizza:MozzarellaTopping" "pizza:PepperoniTopping" "pizza:VegetarianPizza" "pizza:RedPepperTopping" "pizza:PizzaTopping" "pizza:MargharitaPizza" "pizza:MyPizza" "pizza:NonVegetarianPizza" "pizza:ParmezanTopping" "pizza:AmericanPizza" "pizza:CheeseTopping" "pizza:DeepPanBase" "pizza:Pizza" "pizza:HamTopping" "pizza:MeatTopping" "pizza:MushroomTopping" "pizza:ThinAndCrispyBase" "pizza:NamedPizza" ; /*classes style*/
 	"pizza:ThinAndCrispyBase" -> "pizza:PizzaBase" [ label = "rdfs:subClassOf" ];
 	"pizza:GreenPepperTopping" -> "pizza:PepperTopping" [ label = "rdfs:subClassOf" ];
 	"pizza:TomatoTopping" -> "pizza:VegetableTopping" [ label = "rdfs:subClassOf" ];
