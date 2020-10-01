@@ -1,0 +1,313 @@
+@prefix : <http://lumii.lv/ontologies/pizza.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://lumii.lv/ontologies/pizza.owl> .
+
+<http://lumii.lv/ontologies/pizza.owl> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://lumii.lv/ontologies/pizza.owl#hasBase
+:hasBase rdf:type owl:ObjectProperty ;
+         rdfs:domain :Pizza ;
+         rdfs:range :PizzaBase .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#hasTopping
+:hasTopping rdf:type owl:ObjectProperty ;
+            rdfs:domain :Pizza ;
+            rdfs:range :PizzaTopping .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#isBaseOf
+:isBaseOf rdf:type owl:ObjectProperty ;
+          owl:inverseOf :hasBase ;
+          rdfs:domain :PizzaBase ;
+          rdfs:range :Pizza .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#isToppingOf
+:isToppingOf rdf:type owl:ObjectProperty ;
+             owl:inverseOf :hasTopping ;
+             rdfs:domain :PizzaTopping ;
+             rdfs:range :Pizza .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://lumii.lv/ontologies/pizza.owl#hasCalorificValue
+:hasCalorificValue rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://lumii.lv/ontologies/pizza.owl#AmericanPizza
+:AmericanPizza rdf:type owl:Class ;
+               rdfs:subClassOf :NamedPizza ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTopping ;
+                                 owl:someValuesFrom :MozzarellaTopping
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTopping ;
+                                 owl:someValuesFrom :PepperoniTopping
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTopping ;
+                                 owl:someValuesFrom :TomatoTopping
+                               ] .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#CheeseTopping
+:CheeseTopping rdf:type owl:Class ;
+               rdfs:subClassOf :PizzaTopping .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#CheeseyPizza
+:CheeseyPizza rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasTopping ;
+                                                           owl:someValuesFrom :CheeseTopping
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :Pizza .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#DeepPanBase
+:DeepPanBase rdf:type owl:Class ;
+             rdfs:subClassOf :PizzaBase ;
+             owl:disjointWith :ThinAndCrispyBase .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#GreenPepperTopping
+:GreenPepperTopping rdf:type owl:Class ;
+                    rdfs:subClassOf :PepperTopping ;
+                    owl:disjointWith :RedPepperTopping .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#HamTopping
+:HamTopping rdf:type owl:Class ;
+            rdfs:subClassOf :MeatTopping ;
+            owl:disjointWith :PepperoniTopping .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#HighCaloriePizza
+:HighCaloriePizza rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasCalorificValue ;
+                                                               owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                    owl:onDatatype xsd:integer ;
+                                                                                    owl:withRestrictions ( [ xsd:minInclusive 400
+                                                                                                           ]
+                                                                                                         )
+                                                                                  ]
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf :Pizza .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#MargharitaPizza
+:MargharitaPizza rdf:type owl:Class ;
+                 rdfs:subClassOf :NamedPizza ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTopping ;
+                                   owl:someValuesFrom :MozzarellaTopping
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTopping ;
+                                   owl:someValuesFrom :TomatoTopping
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTopping ;
+                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( :MozzarellaTopping
+                                                                     :TomatoTopping
+                                                                   )
+                                                     ]
+                                 ] ;
+                 rdfs:comment "A pizza that only has Mozzarella and Tomato toppings" .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#MeatTopping
+:MeatTopping rdf:type owl:Class ;
+             rdfs:subClassOf :PizzaTopping .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#MozzarellaTopping
+:MozzarellaTopping rdf:type owl:Class ;
+                   rdfs:subClassOf :CheeseTopping ;
+                   owl:disjointWith :ParmezanTopping .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#MushroomTopping
+:MushroomTopping rdf:type owl:Class ;
+                 rdfs:subClassOf :VegetableTopping .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#MyPizza
+:MyPizza rdf:type owl:Class ;
+         rdfs:subClassOf :NamedPizza ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasTopping ;
+                           owl:someValuesFrom :CheeseTopping
+                         ] .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#NamedPizza
+:NamedPizza rdf:type owl:Class ;
+            rdfs:subClassOf :Pizza .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#NonVegetarianPizza
+:NonVegetarianPizza rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:complementOf :VegetarianPizza
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf :Pizza .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#ParmezanTopping
+:ParmezanTopping rdf:type owl:Class ;
+                 rdfs:subClassOf :CheeseTopping .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#PepperTopping
+:PepperTopping rdf:type owl:Class ;
+               rdfs:subClassOf :VegetableTopping .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#PepperoniTopping
+:PepperoniTopping rdf:type owl:Class ;
+                  rdfs:subClassOf :MeatTopping .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#Pizza
+:Pizza rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasBase ;
+                         owl:someValuesFrom :PizzaBase
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCalorificValue ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:integer
+                       ] .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#PizzaBase
+:PizzaBase rdf:type owl:Class .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#PizzaTopping
+:PizzaTopping rdf:type owl:Class .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#RedPepperTopping
+:RedPepperTopping rdf:type owl:Class ;
+                  rdfs:subClassOf :PepperTopping .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#ThinAndCrispyBase
+:ThinAndCrispyBase rdf:type owl:Class ;
+                   rdfs:subClassOf :PizzaBase .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#TomatoTopping
+:TomatoTopping rdf:type owl:Class ;
+               rdfs:subClassOf :VegetableTopping .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#VegetableTopping
+:VegetableTopping rdf:type owl:Class ;
+                  rdfs:subClassOf :PizzaTopping .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#VegetarianPizza
+:VegetarianPizza rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasTopping ;
+                                                              owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                  owl:unionOf ( :CheeseTopping
+                                                                                                :VegetableTopping
+                                                                                              )
+                                                                                ]
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf :Pizza .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://lumii.lv/ontologies/pizza.owl#TestPizza2
+:TestPizza2 rdf:type owl:NamedIndividual ,
+                     :Pizza ;
+            :hasCalorificValue 250 .
+
+
+###  http://lumii.lv/ontologies/pizza.owl#TetsPizza1
+:TetsPizza1 rdf:type owl:NamedIndividual ,
+                     :Pizza ;
+            :hasCalorificValue 500 .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CheeseTopping
+                :MeatTopping
+                :VegetableTopping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :MushroomTopping
+                :PepperTopping
+                :TomatoTopping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Pizza
+                :PizzaBase
+                :PizzaTopping
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
